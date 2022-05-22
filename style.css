@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "Typewriter";
+    src: url("fonts/veteran typewriter.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* MENU NAVBAR*/
+
+nav {
+    display: flex;
+    justify-content: flex-start
+    align-items: center;
+    height: 8vh;
+    background: linear-gradient(90deg, rgba(77,0,130,1) 0%, rgba(43,0,62,1) 57%, rgba(93,0,157,1) 100%);
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin: 20px;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 20px;
+    margin-top: 20px;
+}  
+
+a {
+    color: rgb(187, 187, 187);
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+
+
+body {
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(29,0,42,1) 57%, rgba(77,0,130,1) 100%);
+    font-family: "Typewriter", Arial, Helvetica, sans-serif;
+    color: rgb(187, 187, 187);
+    font-family: ;
+}
+
+h2 {
+    color: rgb(187, 187, 187);
+    text-align: center;
+    text-shadow: ;
+    font-weight: normal;
+}
+
+.p {
+    font-size: 20px;
+    text-align: center;
+}
+
+
