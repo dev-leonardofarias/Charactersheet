@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ficha dos Jogadores</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ficha dos Jogadores</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
         <nav>
             <h1>O Rei Caído</h1>
-            <div class="menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-                <div class="line4"></div>
-            </div>
             <ul class="nav-list">
                 <li><a href="#">Status</a></li>
                 <li><a href="#">Atributos</a></li>
@@ -24,8 +18,133 @@
                 <li><a href="#">Perícias</a></li>
             </ul>
         </nav>
-    </header>
-    <h2>Ficha De Personagem: </h2>
-    <p class="p">G?3?X?<br>Gau?<br>Gauzinho?</p>
-</body>
+        </header>
+            <h2>Ficha De Personagem: </h2>
+            
+        <div class="container">
+
+<!-- MODAL CONTENT -->
+
+            <div id="lifeModal" class="modal modal-input">
+                <div class="modal-content">
+                    <h3>MODIFICAR VIDA</h3>
+                    <hr>
+                    
+                    <form class="formModal" id="changeLife">
+                        <h4>Atual</h4>
+                        <input type="number" name="current" id="lifeCurrent" min="0">
+                        <h4>Máximo</h4>
+                        <input type="number" name="max" id="lifeMax" min="0">
+                        <input type="submit" value="Salvar">
+                    </form>
+                </div>
+            </div>
+
+<!-- DETALHES PESSOAIS -->
+
+            <div class="details border">
+                <h3 class="grid-title">DETALHES PESSOAIS</h3>
+                <hr>
+
+                <div class="inputs">
+                    <h5>Nome</h5>
+                        <input type="text" name="name" id="name" value="">
+                    <h5>Jogador</h5>
+                        <input type="text" name="player" id="player" value="">
+                    <h5>Ocupação</h5>
+                        <input type="text" name="occupation" id="occupation" value="">
+                    <h5>Idade</h5>
+                        <input type="text" name="age" id="age" value="">
+                    <h5>Sexo</h5>
+                        <select name="sex" id="sex">
+                            <option value="male">Masculino</option>
+                            <option value="female">Feminino</option>
+                            <option value="other">Outro</option>
+                        </select>
+                    <h5>Local de nascimento</h5>
+                        <input type="text" name="birthplace" id="birthplace" value="">
+                    <h5>Local de residência</h5>
+                        <input type="text" name="residence" id="residence" value="">
+                </div>
+            </div>
+
+<!-- STATUS -->
+
+            <div class="character">
+                <div class="characterHeader">
+                    <img class="characterPhoto" src="img/Kaiser Icon.jpg" alt="Foto">
+                    <img src="img/Dado.png" alt="Dado" class="dice">
+                </div>
+
+                <div class="bars">
+                    <h5>Vida</h5>
+                    <div class="bar">
+                        <div class="lifeBar">
+                            <p class="barcount" id="lifeCount"></p>
+                        </div>
+                    </div>
+                    <div class="checkboxes">
+                        <input type="checkbox" id="lesion" name="lesion" value="lesion" >
+                        <label for="">Lesão Grave</label>
+                        <input type="checkbox" id="inconscious" name="inconscious" value="inconscious" >
+                        <label for="">Inconsciente</label>
+                        <input type="checkbox" id="dying" name="dying" value="dying" >
+                        <label for="">Morrendo</label>
+                    </div>
+
+                    <h5>Sanidade</h5>
+                    <div class="sanity">
+                        <div class="contentSanityBar">
+                            <div class="sanityBar">
+                                <p class="barcount" id="sanityCount"></p>
+                            </div>
+                        </div>
+                        <img src="img/Dado.png" alt="Dado" class="sanityDice">
+                    </div>
+                    <div class="checkboxes">
+                        <input type="checkbox" id="traumatized" name="traumatized" value="traumatized">
+                        <label for="traumatized">Traumatizado</label>
+                        <input type="checkbox" id="crazed" name="crazed" value="crazed" >
+                        <label for="crazed">Enlouquecido</label>
+                    </div>
+                </div>
+                <div class="extra">
+                    <div class="damage">
+                        <p>Dano extra</p>
+                        <input type="text" name="damage" id="damage">
+                    </div>
+                    <div class="body1">
+                        <p>Corpo</p>
+                        <input type="text" name="body1" id="body1">
+                    </div>
+                    <div class="exposure">
+                        <p>Exposição Paranormal</p>
+                        <input type="text" name="exposure" id="exposure">
+                    </div>
+                </div>
+            </div>
+<!-- ATRIBUTOS -->
+
+            <div class="attributes border">
+                <h3 class="grid-title">ATRIBUTOS</h3>
+                <hr>
+            </div>
+
+<!-- PERÍCIAS (ACESSO RÁPIDO) -->
+
+            <div class="expertise border">
+                <h3 class="grid-title">PERÍCIAS</h3>
+            </div>
+
+<!-- COMBATE -->
+
+            <div class="combat border"></div>
+
+<!-- PERÍCIAS -->
+
+            <div class="expertise2 border"></div>
+        </div>
+
+        <script src="characterSheet.js"></script>
+    </body>
 </html>
